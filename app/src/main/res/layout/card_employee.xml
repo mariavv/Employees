@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/cardEmployee_marginBottom"
+        android:background="@color/cardEmployee_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/cardProfession_profMarginVert"
+            android:layout_marginEnd="@dimen/cardProfession_profLayoutMarginEnd"
+            android:layout_marginLeft="@dimen/cardProfession_profBottomMarginLeft"
+            android:layout_marginRight="@dimen/cardProfession_profLayoutMarginEnd"
+            android:layout_marginStart="@dimen/cardProfession_profBottomMarginLeft"
+            android:layout_marginTop="@dimen/cardProfession_profMarginVert"
+            android:lineSpacingExtra="@dimen/cardProfession_profLineSpacingExtra"
+            android:textSize="@dimen/cardProfession_profTextSize"
+            android:textStyle="bold"
+            tools:text="@string/cardEmployee_name" />
+
+        <TextView
+            android:id="@+id/birthDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/cardProfession_profMarginVert"
+            android:layout_marginEnd="@dimen/cardProfession_profLayoutMarginEnd"
+            android:layout_marginLeft="@dimen/cardProfession_profBottomMarginLeft"
+            android:layout_marginRight="@dimen/cardProfession_profLayoutMarginEnd"
+            android:layout_marginStart="@dimen/cardProfession_profBottomMarginLeft"
+            android:layout_marginTop="@dimen/cardProfession_profMarginVert"
+            android:lineSpacingExtra="@dimen/cardProfession_profLineSpacingExtra"
+            android:textSize="@dimen/cardProfession_profTextSize"
+            android:textStyle="bold"
+            tools:text="@string/cardEmployee_birthDate" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

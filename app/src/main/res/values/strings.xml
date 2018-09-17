@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Employees</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="message_error_get_data">Ошибка получения данных по сети:   %s</string>
+    <string name="error_message">Ошибка</string>
+
+    <string name="cardProfession_profName">Специальность</string>
+
+    <string name="cardEmployee_name">Имя Фамилия</string>
+    <string name="cardEmployee_birthDate">Возраст</string>
+
+    <string name="emp_last_name">Фамилия: </string>
+    <string name="emp_name">Имя: </string>
+    <string name="emp_birth_date">Дата рождения: </string>
+    <string name="emp_age">Возраст: </string>
+    <string name="emp_speciality">Специальность: </string>
+    <string name="employee_spec_devider">\n</string>
+    <string name="employee_birth_date_defoult">--</string>
+</resources>

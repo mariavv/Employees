@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="progressBar_size">25dp</dimen>
+    <dimen name="progressBar_marginTop">50dp</dimen>
+
+    <dimen name="cardProfession_profMarginVert">8dp</dimen>
+    <dimen name="cardProfession_profLineSpacingExtra">4sp</dimen>
+    <dimen name="cardProfession_profTextSize">18sp</dimen>
+    <dimen name="cardProfession_profLayoutMarginEnd">20dp</dimen>
+    <dimen name="cardProfession_profBottomMarginLeft">46dp</dimen>
+    <dimen name="scrollbarSize">2dp</dimen>
+    <dimen name="cardProfession_specCardHeght">50dp</dimen>
+    <dimen name="cardEmployee_marginBottom">20dp</dimen>
+    <dimen name="emp_text_size">20sp</dimen>
+</resources>
