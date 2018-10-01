@@ -13,14 +13,14 @@ import java.util.List;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
-public class BasePresenter {
+class BasePresenter {
 
     private final EmployeesRepo employeesRepo = new EmployeesRepo();
     private BaseView mView;
     private Context mContext;
     private DbProvider mDbProvider;
 
-    public void onCreate(BaseView view, boolean turn) {
+    void onCreate(BaseView view, boolean turn) {
         this.mView = view;
         this.mContext = (Context) view;
         mDbProvider = new DbProvider(mContext);
@@ -39,7 +39,7 @@ public class BasePresenter {
         }
     }
 
-    public void onDestroy() {
+    void onDestroy() {
         mView = null;
     }
 

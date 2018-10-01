@@ -21,7 +21,6 @@ public class EmployeesFragment extends Fragment implements EmployeesView,
     private static final String ARG_SPECIALITY_ID = "speciality_id";
 
     private View mView;
-    private RecyclerView mRecycler;
     private EmployeesFeedAdapter mAdapter;
 
     private EmployeesPresenter mPresenter = new EmployeesPresenter();
@@ -44,8 +43,12 @@ public class EmployeesFragment extends Fragment implements EmployeesView,
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mSpecialityId = Integer.parseInt(getArguments().getString(ARG_SPECIALITY_ID));
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            String spec_id = bundle.getString(ARG_SPECIALITY_ID);
+            if (spec_id != null) {
+                mSpecialityId = Integer.parseInt(spec_id);
+            }
         }
     }
 
@@ -108,9 +111,9 @@ public class EmployeesFragment extends Fragment implements EmployeesView,
     }
 
     private void configureRecyclerView() {
-        mRecycler = mView.findViewById(R.id.recycler);
+        RecyclerView recycler = mView.findViewById(R.id.recycler);
         mAdapter = new EmployeesFeedAdapter(this);
-        mRecycler.setAdapter(mAdapter);
-        mRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
+        recycler.setAdapter(mAdapter);
+        recycler.setLayoutManager(new LinearLayoutManager(getContext()));
     }
 }
