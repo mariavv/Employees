@@ -8,3 +8,17 @@
 3. Просмотр детальной информации о работнике.
 Выводится имя, фамилия, дата рождения, возраст, специальность.
 
+
+
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+/.idea/gradle.xml
+/.idea/misc.xml
+/.idea/vcs.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+*.iml
