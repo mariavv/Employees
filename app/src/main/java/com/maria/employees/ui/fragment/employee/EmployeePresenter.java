@@ -11,16 +11,16 @@ class EmployeePresenter {
     private Context mContext;
     private EmployeeView mView;
 
-    public void onCreateView(EmployeeView view, Context context) {
+    void onCreateView(EmployeeView view, Context context) {
         this.mView = view;
         this.mContext = context;
     }
 
-    public void onStart(int employeeId) {
+    void onStart(int employeeId) {
         mView.showEmployee(new DbProvider(mContext).getEmployee(employeeId));
     }
 
-    public void onDestroy() {
+    void onDestroy() {
         mView = null;
     }
 }

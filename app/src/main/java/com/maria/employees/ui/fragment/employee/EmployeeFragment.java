@@ -40,8 +40,13 @@ public class EmployeeFragment extends Fragment implements EmployeeView {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mEmpId = Integer.parseInt(getArguments().getString(ARG_EMP_ID));
+
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            String emp_id = bundle.getString(ARG_EMP_ID);
+            if (emp_id != null) {
+                mEmpId = Integer.parseInt(emp_id);
+            }
         }
     }
 

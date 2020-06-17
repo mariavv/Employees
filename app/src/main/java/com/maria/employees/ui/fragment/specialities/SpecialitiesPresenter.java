@@ -9,12 +9,12 @@ class SpecialitiesPresenter {
     private SpecialitiesView mView;
     private Context mContext;
 
-    public void onCreateView(SpecialitiesView view, Context context) {
+    void onCreateView(SpecialitiesView view, Context context) {
         this.mView = view;
         this.mContext = context;
     }
 
-    public void onStart() {
+    void onStart() {
         mView.showSpecialities(new DbProvider(mContext).getSpecialities());
     }
 
@@ -22,7 +22,7 @@ class SpecialitiesPresenter {
         mView = null;
     }
 
-    public void onItemClick(String specialityId) {
+    void onItemClick(String specialityId) {
         mView.showEmployees(specialityId);
     }
 }

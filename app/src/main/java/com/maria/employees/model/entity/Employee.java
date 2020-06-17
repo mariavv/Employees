@@ -9,14 +9,14 @@ import io.reactivex.annotations.Nullable;
 public class Employee {
 
     @SerializedName("f_name")
-    private String mName = "";
+    private String mName;
 
     @SerializedName("l_name")
     private String mLastName;
 
     @Nullable
     @SerializedName("birthday")
-    private String mBirthDate = "";
+    private String mBirthDate;
 
     @Nullable
     @SerializedName("avatr_url")

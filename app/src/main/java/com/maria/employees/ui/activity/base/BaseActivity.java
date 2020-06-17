@@ -1,5 +1,6 @@
 package com.maria.employees.ui.activity.base;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -10,13 +11,15 @@ import com.maria.employees.R;
 import com.maria.employees.ui.fragment.specialities.SpecialitiesFragment;
 import com.maria.employees.ui.uitools.UiTools;
 
+import org.androidannotations.annotations.EActivity;
+
+@SuppressLint("Registered")
+@EActivity(R.layout.activity_base)
 public class BaseActivity extends AppCompatActivity implements BaseView {
 
     private static final String KEY_TURN = "turn";
     private final BasePresenter mPresenter = new BasePresenter();
     private ProgressBar mProgressBar;
-    private SpecialitiesFragment mSpecialitiesFrafment;
-    private boolean turn = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +28,7 @@ public class BaseActivity extends AppCompatActivity implements BaseView {
 
         initViews();
 
-        turn = savedInstanceState != null && savedInstanceState.getBoolean(KEY_TURN);
-
+        boolean turn = savedInstanceState != null && savedInstanceState.getBoolean(KEY_TURN);
         mPresenter.onCreate(this, turn);
     }
 
@@ -69,8 +71,7 @@ public class BaseActivity extends AppCompatActivity implements BaseView {
         mProgressBar.setVisibility(View.GONE);
 
         FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
-        mSpecialitiesFrafment = SpecialitiesFragment.newInstance();
-        trans.add(R.id.base_contanier, mSpecialitiesFrafment);
+        trans.add(R.id.base_contanier, SpecialitiesFragment.newInstance());
         trans.commit();
     }
 
